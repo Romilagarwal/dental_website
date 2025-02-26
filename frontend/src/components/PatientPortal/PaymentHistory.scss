@@ -1,0 +1,61 @@
+.payment-history {
+  .payments-list {
+    @apply space-y-4;
+
+    .payment-card {
+      @apply bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md
+             border border-gray-200 dark:border-gray-700;
+
+      .payment-header {
+        @apply flex justify-between items-center mb-4;
+
+        .amount {
+          @apply flex items-center gap-2 text-2xl font-bold text-gray-900 dark:text-white;
+
+          .icon {
+            @apply text-green-500;
+          }
+        }
+
+        .status {
+          @apply px-3 py-1 rounded-full text-sm font-medium;
+
+          &.completed {
+            @apply bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200;
+          }
+
+          &.pending {
+            @apply bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200;
+          }
+
+          &.failed {
+            @apply bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200;
+          }
+        }
+      }
+
+      .payment-details {
+        @apply space-y-2 mb-4;
+
+        .treatment {
+          @apply text-gray-700 dark:text-gray-300;
+        }
+
+        .date {
+          @apply text-sm text-gray-600 dark:text-gray-400;
+        }
+
+        .payment-method {
+          @apply flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400;
+        }
+      }
+
+      .download-invoice {
+        @apply w-full flex items-center justify-center gap-2 mt-4
+               px-4 py-2 bg-gray-100 dark:bg-gray-700 rounded-lg
+               text-gray-700 dark:text-gray-300 transition-colors
+               hover:bg-gray-200 dark:hover:bg-gray-600;
+      }
+    }
+  }
+} 

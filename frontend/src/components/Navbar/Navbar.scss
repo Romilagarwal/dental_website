@@ -1,0 +1,228 @@
+@import './../../sass/fonts.scss';
+@import './../../sass/colors.scss';
+
+.announcement-bar {
+    @apply bg-blue-500 text-white text-center py-2 text-sm font-medium;
+    
+    &.emergency {
+        @apply bg-red-500;
+    }
+
+    @apply bg-blue-500 dark:bg-blue-600;
+}
+
+.main-nav {
+    @apply fixed w-full z-50 bg-white dark:bg-gray-900 transition-all duration-300;
+
+    &.scrolled {
+        @apply shadow-md;
+    }
+
+    .top-bar {
+        @apply bg-gray-50 dark:bg-gray-800 py-2 text-sm hidden md:block;
+
+        .clinic-info {
+            @apply flex justify-between items-center;
+
+            .contact-info {
+                @apply flex items-center space-x-6;
+
+                .info-item {
+                    @apply flex items-center space-x-2 text-gray-600 hover:text-blue-600 transition-colors;
+
+                    svg {
+                        @apply w-4 h-4;
+                    }
+
+                    .open {
+                        @apply text-green-600;
+                    }
+
+                    .closed {
+                        @apply text-red-600;
+                    }
+                }
+            }
+
+            .action-buttons {
+                @apply flex items-center space-x-4;
+
+                button {
+                    @apply flex items-center space-x-2 px-4 py-1 rounded-full text-white 
+                           transition-all duration-300 transform hover:scale-105;
+
+                    svg {
+                        @apply w-4 h-4;
+                    }
+                }
+
+                .whatsapp-btn {
+                    @apply bg-green-500 hover:bg-green-600;
+                }
+
+                .emergency-btn {
+                    @apply bg-red-500 hover:bg-red-600;
+                }
+            }
+        }
+    }
+
+    .main-bar {
+        @apply flex items-center justify-between py-4;
+
+        .logo {
+            img {
+                @apply h-12 w-auto transition-transform duration-300;
+                &:hover {
+                    @apply transform scale-105;
+                }
+            }
+        }
+
+        .mobile-menu-btn {
+            @apply md:hidden p-2 rounded-lg hover:bg-gray-100;
+            svg {
+                @apply w-6 h-6;
+            }
+        }
+
+        .nav-content {
+            @apply hidden md:flex items-center space-x-8;
+
+            &.open {
+                @apply absolute top-full left-0 right-0 flex flex-col bg-white shadow-lg md:relative 
+                       md:shadow-none md:flex-row md:bg-transparent;
+            }
+
+            .nav-links {
+                @apply flex flex-col md:flex-row md:items-center md:space-x-6;
+
+                .nav-link {
+                    @apply flex items-center space-x-2 px-4 py-2 text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 
+                           transition-colors relative;
+
+                    svg {
+                        @apply w-5 h-5;
+                    }
+
+                    &.active {
+                        @apply text-blue-600;
+                        &:after {
+                            content: '';
+                            @apply absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 transform scale-x-100;
+                        }
+                    }
+
+                    .badge {
+                        @apply ml-2 px-2 py-0.5 text-xs font-semibold bg-red-100 text-red-600 rounded-full;
+                    }
+                }
+            }
+
+            .nav-actions {
+                @apply flex items-center space-x-4;
+
+                .login-btn {
+                    @apply flex items-center space-x-2 px-4 py-2 rounded-lg bg-blue-600 text-white 
+                           hover:bg-blue-700 transition-colors;
+
+                    svg {
+                        @apply w-4 h-4;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@screen md {
+    .nav-content {
+        @apply flex !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-content {
+        &.open {
+            @apply block py-4;
+            
+            .nav-links {
+                @apply space-y-2 pb-4;
+            }
+
+            .nav-actions {
+                @apply border-t pt-4 px-4;
+            }
+        }
+    }
+}
+
+// Mobile Responsive
+@media (max-width: 575px) {
+    .main-nav {
+        padding: 10px 0;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+
+        .navbar {
+            .navbar-nav {
+                .nav-item {
+                    .nav-link {
+                        margin: 10px 0px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .main-nav {
+        padding: 10px 0;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+
+        .navbar {
+            .navbar-nav {
+                .nav-item {
+                    .nav-link {
+                        margin: 10px 0px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Medium Devices Responsive
+@media (min-width: 768px) and (max-width: 991px) {
+    .main-nav {
+        padding: 15px 0;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+
+        .navbar {
+            .navbar-nav {
+                .nav-item {
+                    .nav-link {
+                        margin: 10px 0px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .main-nav {
+        padding: 20px 0;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+
+        .navbar {
+            .navbar-nav {
+                .nav-item {
+                    .nav-link {
+                        margin: 10px 15px;
+                    }
+                }
+            }
+        }
+    }
+}

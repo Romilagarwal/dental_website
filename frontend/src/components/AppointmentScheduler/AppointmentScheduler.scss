@@ -1,0 +1,97 @@
+.appointment-scheduler {
+  @apply max-w-6xl mx-auto p-6;
+
+  .scheduler-container {
+    @apply bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 grid gap-8 md:grid-cols-2;
+
+    h3 {
+      @apply text-xl font-semibold mb-4 flex items-center gap-2;
+      svg {
+        @apply text-blue-600 dark:text-blue-400;
+      }
+    }
+  }
+
+  .calendar-section {
+    @apply bg-gray-50 dark:bg-gray-900 p-4 rounded-lg;
+
+    .custom-calendar {
+      @apply w-full border-none shadow-none;
+      
+      .react-calendar__tile--active {
+        @apply bg-blue-600;
+      }
+
+      .react-calendar__tile--disabled {
+        @apply bg-gray-200 dark:bg-gray-700 cursor-not-allowed;
+      }
+    }
+  }
+
+  .time-slots-section {
+    @apply bg-gray-50 dark:bg-gray-900 p-4 rounded-lg;
+
+    .time-slots-grid {
+      @apply grid grid-cols-2 sm:grid-cols-3 gap-2;
+
+      .time-slot {
+        @apply px-4 py-2 rounded-lg text-sm font-medium transition-colors
+               hover:bg-blue-100 dark:hover:bg-blue-900
+               focus:outline-none focus:ring-2 focus:ring-blue-500;
+
+        &.selected {
+          @apply bg-blue-600 text-white hover:bg-blue-700;
+        }
+
+        &.unavailable {
+          @apply bg-gray-200 dark:bg-gray-700 cursor-not-allowed
+                 hover:bg-gray-200 dark:hover:bg-gray-700;
+        }
+      }
+    }
+  }
+
+  .appointment-form {
+    @apply col-span-2 space-y-4;
+
+    .form-group {
+      @apply space-y-1;
+
+      label {
+        @apply flex items-center gap-2 text-gray-700 dark:text-gray-300;
+
+        svg {
+          @apply text-blue-600 dark:text-blue-400;
+        }
+      }
+
+      input, textarea {
+        @apply w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600
+               bg-white dark:bg-gray-900 
+               focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+      }
+
+      textarea {
+        @apply h-32 resize-none;
+      }
+
+      &.radio-group {
+        @apply flex items-center gap-4;
+
+        div {
+          @apply flex items-center gap-4;
+
+          input[type="radio"] {
+            @apply w-4 h-4 text-blue-600;
+          }
+        }
+      }
+    }
+
+    .submit-btn {
+      @apply w-full bg-blue-600 text-white py-3 rounded-lg font-medium
+             hover:bg-blue-700 transition-colors
+             focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+    }
+  }
+} 

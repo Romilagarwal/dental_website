@@ -1,0 +1,75 @@
+.dental-faq {
+  @apply py-16 bg-gray-50;
+  
+  .container {
+    @apply max-w-3xl mx-auto px-4;
+  }
+  
+  .section-header {
+    @apply text-center mb-12;
+    
+    h2 {
+      @apply text-3xl md:text-4xl font-bold text-gray-900 mb-3;
+    }
+    
+    p {
+      @apply text-gray-600 max-w-2xl mx-auto;
+    }
+  }
+  
+  .faq-tabs {
+    @apply flex flex-wrap justify-center gap-2 mb-8;
+    
+    .tab-button {
+      @apply px-4 py-2 text-sm rounded-full border border-gray-300 bg-white transition-colors duration-300 mb-2;
+      
+      &:hover {
+        @apply bg-gray-50;
+      }
+      
+      &.active {
+        @apply bg-blue-600 text-white border-blue-600;
+      }
+    }
+  }
+  
+  .faq-list {
+    @apply space-y-4;
+    
+    .faq-item {
+      @apply bg-white rounded-lg overflow-hidden shadow-sm;
+      
+      .faq-question {
+        @apply flex justify-between items-center w-full p-5 text-left font-medium text-gray-900;
+        
+        &:hover {
+          @apply bg-gray-50;
+        }
+        
+        &.open {
+          @apply border-b border-gray-200;
+        }
+        
+        svg {
+          @apply text-gray-500 flex-shrink-0 ml-2;
+        }
+      }
+      
+      .faq-answer {
+        @apply px-5 py-4 overflow-hidden;
+        
+        p {
+          @apply text-gray-600;
+        }
+      }
+    }
+  }
+  
+  .faq-footer {
+    @apply mt-12 text-center text-gray-600;
+    
+    a {
+      @apply text-blue-600 font-medium hover:underline;
+    }
+  }
+} 

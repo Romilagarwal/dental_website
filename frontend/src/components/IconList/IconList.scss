@@ -1,0 +1,33 @@
+@import'../../sass//colors.scss';
+
+.icon-list {
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s;
+    
+    &:hover {
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+    
+    &.service-card {
+        background: white;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+
+    .icon-area {
+        margin-bottom: 1rem;
+    }
+
+    .icon-list-text {
+        > * + * {
+            margin-top: 0.5rem;
+        }
+    }
+}
+
+// Mobile Responsive
+@media (max-width:575px){
+    .icon-area .icon-list {
+        margin-bottom: 25px;
+    }
+}

@@ -1,0 +1,179 @@
+.patient-portal {
+  @apply max-w-5xl mx-auto my-12 px-4;
+  
+  .portal-header {
+    @apply text-center mb-8;
+    
+    h1 {
+      @apply text-3xl font-bold text-gray-900 mb-2;
+    }
+    
+    p {
+      @apply text-gray-600;
+    }
+  }
+  
+  .portal-tabs {
+    @apply flex flex-wrap border-b border-gray-300 mb-8;
+    
+    button {
+      @apply px-4 py-3 font-medium text-gray-600 flex items-center transition duration-200;
+      
+      svg {
+        @apply mr-2;
+      }
+      
+      &:hover {
+        @apply text-blue-600;
+      }
+      
+      &.active {
+        @apply text-blue-600 border-b-2 border-blue-600;
+      }
+    }
+    
+    .logout-button {
+      @apply ml-auto text-red-600;
+      
+      &:hover {
+        @apply text-red-700;
+      }
+    }
+  }
+  
+  .portal-content {
+    @apply bg-white rounded-lg shadow-md p-6;
+    
+    h2 {
+      @apply text-2xl font-bold text-gray-900 mb-6;
+    }
+    
+    .loading {
+      @apply text-center py-8 text-gray-600;
+    }
+    
+    .error-message {
+      @apply mb-4 p-3 bg-red-50 text-red-600 rounded;
+    }
+    
+    .success-message {
+      @apply mb-4 p-3 bg-green-50 text-green-600 rounded;
+    }
+    
+    .no-appointments {
+      @apply text-center py-8;
+      
+      p {
+        @apply text-gray-600 mb-4;
+      }
+      
+      .book-button {
+        @apply inline-block px-6 py-3 bg-blue-600 text-white rounded-lg font-medium;
+      }
+    }
+    
+    .appointments-list {
+      @apply grid gap-4;
+      
+      .appointment-card {
+        @apply border rounded-lg overflow-hidden bg-white;
+        
+        &.completed {
+          @apply border-green-200 bg-green-50;
+        }
+        
+        &.canceled {
+          @apply border-red-200 bg-red-50;
+        }
+        
+        &.rescheduled {
+          @apply border-yellow-200 bg-yellow-50;
+        }
+        
+        .appointment-header {
+          @apply flex justify-between items-center p-4 border-b;
+          
+          .status-badge {
+            @apply px-3 py-1 rounded-full text-xs font-medium;
+            
+            &.scheduled {
+              @apply bg-blue-100 text-blue-700;
+            }
+            
+            &.completed {
+              @apply bg-green-100 text-green-700;
+            }
+            
+            &.canceled {
+              @apply bg-red-100 text-red-700;
+            }
+            
+            &.rescheduled {
+              @apply bg-yellow-100 text-yellow-700;
+            }
+          }
+          
+          .cancel-button {
+            @apply text-red-600 flex items-center text-sm;
+            
+            svg {
+              @apply mr-1;
+            }
+          }
+        }
+        
+        .appointment-details {
+          @apply p-4;
+          
+          .detail-item {
+            @apply flex items-center text-gray-600 mb-2;
+            
+            svg {
+              @apply mr-2;
+            }
+          }
+          
+          .service-name {
+            @apply text-lg font-semibold text-gray-900 mt-2 mb-3;
+          }
+          
+          .appointment-message {
+            @apply mt-4 pt-4 border-t border-gray-200;
+            
+            strong {
+              @apply block mb-2 text-gray-700;
+            }
+            
+            p {
+              @apply text-gray-600;
+            }
+          }
+        }
+      }
+    }
+    
+    form {
+      @apply max-w-md mx-auto;
+      
+      .form-group {
+        @apply mb-6;
+        
+        label {
+          @apply block mb-2 font-medium text-gray-700;
+        }
+        
+        input {
+          @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+        }
+        
+        small {
+          @apply block mt-1 text-gray-500 text-xs;
+        }
+      }
+      
+      .update-button {
+        @apply w-full py-3 bg-blue-600 text-white rounded-lg font-medium;
+      }
+    }
+  }
+} 

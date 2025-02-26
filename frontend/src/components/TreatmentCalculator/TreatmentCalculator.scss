@@ -1,0 +1,56 @@
+.treatment-calculator {
+  @apply bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg;
+
+  .treatments-list {
+    .treatment-item {
+      @apply border-b dark:border-gray-700 pb-6;
+
+      &:last-child {
+        @apply border-none;
+      }
+
+      .options-grid {
+        .option-btn {
+          @apply flex flex-col p-4 rounded-lg border-2 transition-all
+                 hover:border-blue-500 hover:shadow-md;
+
+          &.selected {
+            @apply border-blue-500 bg-blue-50 dark:bg-blue-900;
+          }
+
+          .option-name {
+            @apply font-medium mb-2;
+          }
+
+          .option-price {
+            @apply text-sm text-gray-600 dark:text-gray-400;
+          }
+        }
+      }
+    }
+  }
+
+  .cost-summary {
+    @apply bg-gray-50 dark:bg-gray-700 rounded-lg p-6 mt-8;
+
+    .info-btn {
+      @apply p-2 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-full;
+    }
+
+    .total-amount {
+      @apply text-center;
+    }
+
+    .cost-breakdown {
+      .breakdown-item {
+        @apply flex justify-between py-2 border-b dark:border-gray-600
+               text-sm text-gray-600 dark:text-gray-400;
+      }
+    }
+
+    .schedule-btn {
+      @apply w-full bg-blue-600 text-white py-3 rounded-lg font-medium
+             hover:bg-blue-700 transition-colors;
+    }
+  }
+} 

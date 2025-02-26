@@ -1,0 +1,321 @@
+.about-hero {
+  @apply py-16 bg-gradient-to-r from-blue-50 to-indigo-50 border-b border-gray-200;
+  
+  .container {
+    @apply max-w-5xl mx-auto px-4;
+  }
+  
+  .about-hero-content {
+    @apply text-center;
+    
+    h1 {
+      @apply text-3xl md:text-4xl font-bold text-gray-900 mb-3;
+    }
+    
+    p {
+      @apply text-gray-600;
+    }
+  }
+}
+
+.about-intro {
+  @apply py-16;
+  
+  .container {
+    @apply max-w-5xl mx-auto px-4;
+  }
+  
+  .about-grid {
+    @apply grid grid-cols-1 lg:grid-cols-5 gap-8 items-center;
+  }
+  
+  .about-content {
+    @apply lg:col-span-3;
+    
+    h2 {
+      @apply text-2xl md:text-3xl font-bold text-gray-900 mb-4;
+    }
+    
+    p {
+      @apply text-gray-700 mb-6;
+    }
+  }
+  
+  .about-highlights {
+    @apply space-y-6 mt-8;
+    
+    .highlight-item {
+      @apply flex items-start;
+      
+      .highlight-icon {
+        @apply flex-shrink-0 w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mr-4;
+        
+        svg {
+          @apply w-6 h-6;
+        }
+      }
+      
+      .highlight-content {
+        h3 {
+          @apply text-lg font-semibold text-gray-900 mb-1;
+        }
+        
+        p {
+          @apply text-gray-600 m-0;
+        }
+      }
+    }
+  }
+  
+  .about-image {
+    @apply lg:col-span-2;
+    
+    .main-image {
+      @apply w-full h-auto rounded-lg shadow-lg;
+    }
+  }
+}
+
+.our-mission {
+  @apply py-16 bg-blue-50;
+  
+  .container {
+    @apply max-w-5xl mx-auto px-4;
+  }
+  
+  .section-header {
+    @apply text-center mb-10;
+    
+    h2 {
+      @apply text-2xl md:text-3xl font-bold text-gray-900 mb-3;
+    }
+    
+    p {
+      @apply text-gray-600;
+    }
+  }
+  
+  .mission-content {
+    @apply max-w-3xl mx-auto;
+    
+    p {
+      @apply text-gray-700 mb-8 text-center;
+    }
+  }
+  
+  .mission-list {
+    @apply space-y-4;
+    
+    li {
+      @apply flex items-start bg-white p-4 rounded-lg shadow-sm;
+      
+      .mission-icon {
+        @apply flex-shrink-0 w-6 h-6 rounded-full bg-green-100 text-green-600 flex items-center justify-center mr-3;
+      }
+    }
+  }
+}
+
+.our-clinic {
+  @apply py-16;
+  
+  .container {
+    @apply max-w-5xl mx-auto px-4;
+  }
+  
+  .section-header {
+    @apply text-center mb-10;
+    
+    h2 {
+      @apply text-2xl md:text-3xl font-bold text-gray-900 mb-3;
+    }
+    
+    p {
+      @apply text-gray-600;
+    }
+  }
+  
+  .clinic-gallery {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-6;
+    
+    .gallery-item {
+      @apply relative overflow-hidden rounded-lg shadow-md;
+      
+      &:hover {
+        img {
+          @apply transform scale-105;
+        }
+        
+        .gallery-caption {
+          @apply opacity-100;
+        }
+      }
+      
+      img {
+        @apply w-full h-64 object-cover transition-transform duration-500;
+      }
+      
+      .gallery-caption {
+        @apply absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-end p-4 text-white opacity-0 transition-opacity duration-300;
+        
+        h3 {
+          @apply text-lg font-bold mb-1;
+        }
+        
+        p {
+          @apply text-sm;
+        }
+      }
+    }
+  }
+}
+
+.meet-doctor {
+  @apply py-16 bg-gradient-to-r from-blue-50 to-indigo-50;
+  
+  .container {
+    @apply max-w-5xl mx-auto px-4;
+  }
+  
+  .section-header {
+    @apply text-center mb-10;
+    
+    h2 {
+      @apply text-2xl md:text-3xl font-bold text-gray-900 mb-3;
+    }
+    
+    p {
+      @apply text-gray-600;
+    }
+  }
+  
+  .doctor-profile {
+    @apply flex flex-col md:flex-row gap-8 items-start;
+    
+    .doctor-image {
+      @apply md:w-1/3 flex-shrink-0;
+      
+      img {
+        @apply w-full rounded-lg shadow-lg;
+      }
+    }
+    
+    .doctor-bio {
+      @apply md:w-2/3;
+      
+      h3 {
+        @apply text-2xl font-bold text-gray-900 mb-1;
+      }
+      
+      .doctor-qualification {
+        @apply text-blue-600 font-medium mb-4;
+      }
+      
+      p {
+        @apply text-gray-700 mb-4;
+      }
+      
+      .doctor-credentials {
+        @apply grid grid-cols-1 md:grid-cols-2 gap-4 mt-6 p-4 bg-white rounded-lg shadow-sm;
+        
+        .credential-item {
+          strong {
+            @apply block text-gray-900 mb-1;
+          }
+          
+          p {
+            @apply text-gray-600 m-0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.clinic-location {
+  @apply py-16;
+  
+  .container {
+    @apply max-w-5xl mx-auto px-4;
+  }
+  
+  .section-header {
+    @apply text-center mb-10;
+    
+    h2 {
+      @apply text-2xl md:text-3xl font-bold text-gray-900 mb-3;
+    }
+    
+    p {
+      @apply text-gray-600;
+    }
+  }
+  
+  .location-grid {
+    @apply grid grid-cols-1 lg:grid-cols-2 gap-8;
+    
+    .location-info {
+      @apply bg-white p-6 rounded-lg shadow-md;
+      
+      .info-item {
+        @apply flex items-start mb-6;
+        
+        svg {
+          @apply w-5 h-5 text-blue-600 mt-1 mr-3;
+        }
+        
+        h3 {
+          @apply text-lg font-semibold text-gray-900 mb-1;
+        }
+        
+        p {
+          @apply text-gray-600;
+        }
+      }
+      
+      .hours-table {
+        @apply mb-6;
+        
+        h3 {
+          @apply text-lg font-semibold text-gray-900 mb-3;
+        }
+        
+        table {
+          @apply w-full;
+          
+          tr {
+            @apply border-b border-gray-100;
+            
+            &:last-child {
+              @apply border-0;
+            }
+          }
+          
+          td {
+            @apply py-2 text-gray-600;
+            
+            &:first-child {
+              @apply font-medium;
+            }
+          }
+        }
+      }
+      
+      .book-appointment {
+        @apply w-full py-3 px-4 bg-blue-600 text-white rounded-md font-medium text-center transition-colors duration-300;
+        
+        &:hover {
+          @apply bg-blue-700;
+        }
+      }
+    }
+    
+    .location-map {
+      @apply h-full min-h-[300px] rounded-lg overflow-hidden shadow-md;
+      
+      iframe {
+        @apply w-full h-full;
+      }
+    }
+  }
+} 

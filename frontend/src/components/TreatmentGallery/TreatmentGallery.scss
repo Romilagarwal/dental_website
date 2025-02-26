@@ -1,0 +1,123 @@
+.treatment-gallery {
+  @apply py-16;
+  
+  .container {
+    @apply max-w-6xl mx-auto px-4;
+  }
+  
+  .section-header {
+    @apply text-center mb-12;
+    
+    h2 {
+      @apply text-3xl md:text-4xl font-bold text-gray-900 mb-3;
+    }
+    
+    p {
+      @apply text-gray-600 max-w-2xl mx-auto;
+    }
+  }
+  
+  .gallery-filters {
+    @apply flex flex-wrap justify-center gap-2 mb-8;
+    
+    .filter-button {
+      @apply px-4 py-2 text-sm rounded-full border border-gray-300 bg-white transition-colors duration-300;
+      
+      &:hover {
+        @apply bg-gray-50;
+      }
+      
+      &.active {
+        @apply bg-blue-600 text-white border-blue-600;
+      }
+    }
+  }
+  
+  .gallery-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6;
+  }
+  
+  .gallery-item {
+    @apply cursor-pointer overflow-hidden rounded-lg bg-white shadow-md transition-all duration-300;
+    
+    &:hover {
+      @apply shadow-lg transform -translate-y-1;
+      
+      .item-overlay {
+        @apply opacity-100;
+      }
+      
+      .item-image img {
+        @apply transform scale-105;
+      }
+    }
+    
+    .item-image {
+      @apply relative h-60 overflow-hidden;
+      
+      img {
+        @apply w-full h-full object-cover transition-transform duration-500;
+      }
+      
+      .item-overlay {
+        @apply absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 transition-opacity duration-300;
+        
+        .overlay-icon {
+          @apply text-white text-3xl;
+        }
+      }
+    }
+    
+    h3 {
+      @apply p-4 text-gray-900 font-medium text-sm;
+    }
+  }
+  
+  .gallery-modal {
+    @apply fixed inset-0 z-50 flex items-center justify-center p-4;
+    
+    .modal-overlay {
+      @apply absolute inset-0 bg-black bg-opacity-75;
+    }
+    
+    .modal-content {
+      @apply relative bg-white rounded-xl overflow-hidden max-w-4xl w-full max-h-[90vh] flex flex-col;
+      
+      .close-modal {
+        @apply absolute top-4 right-4 z-10 p-2 rounded-full bg-white bg-opacity-75 text-gray-800 hover:bg-opacity-100 transition-colors duration-300;
+        
+        svg {
+          @apply text-xl;
+        }
+      }
+      
+      .modal-body {
+        @apply overflow-hidden;
+        
+        img {
+          @apply w-full h-auto max-h-[70vh] object-contain;
+        }
+        
+        .video-wrapper {
+          @apply relative pt-[56.25%];
+          
+          iframe {
+            @apply absolute top-0 left-0 w-full h-full;
+          }
+        }
+      }
+      
+      .modal-info {
+        @apply p-6;
+        
+        h3 {
+          @apply text-xl font-bold text-gray-900 mb-2;
+        }
+        
+        p {
+          @apply text-gray-700;
+        }
+      }
+    }
+  }
+} 

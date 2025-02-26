@@ -1,0 +1,102 @@
+{
+  "navigation": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact",
+    "blog": "Blog",
+    "appointment": "Book Appointment"
+  },
+  "clinic": {
+    "name": "Dr. Reishu Agarwal's Dental Clinic",
+    "status": {
+      "open": "Open Now",
+      "closed": "Closed Now",
+      "opensAt": "Opens at {{time}}"
+    },
+    "address": "Near Kacha Katra Modh, Shahjahanpur, H.O.",
+    "phone": "9415070200",
+    "email": "advancedentalclinic17@gmail.com",
+    "hours": {
+      "weekdays": "10:00 AM - 3:00 PM, 6:30 PM - 9:30 PM",
+      "sunday": "10:00 AM - 3:00 PM (Evening Closed)"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Your Smile Deserves The Best Care",
+      "subtitle": "Providing quality dental care in Shahjahanpur for over 20 years",
+      "cta": "Book an Appointment"
+    },
+    "features": {
+      "title": "Why Choose Us",
+      "subtitle": "We provide comprehensive dental care with a patient-first approach",
+      "items": {
+        "advanced": {
+          "title": "Advanced Technology",
+          "description": "State-of-the-art equipment for precise diagnosis and treatment"
+        },
+        "experienced": {
+          "title": "Experienced Doctors",
+          "description": "Our team has decades of combined experience in all dental specialties"
+        },
+        "affordable": {
+          "title": "Affordable Care",
+          "description": "Quality dental care at reasonable prices with flexible payment options"
+        }
+      }
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Comprehensive dental care for your entire family",
+    "items": {
+      "generalDentistry": {
+        "title": "General Dentistry",
+        "description": "Routine check-ups, cleanings, and preventive care"
+      },
+      "cosmetic": {
+        "title": "Cosmetic Dentistry",
+        "description": "Teeth whitening, veneers, and smile makeovers"
+      },
+      "orthodontics": {
+        "title": "Orthodontics",
+        "description": "Braces, aligners, and other teeth straightening treatments"
+      },
+      "implants": {
+        "title": "Dental Implants",
+        "description": "Permanent replacement for missing teeth"
+      },
+      "emergency": {
+        "title": "Emergency Care",
+        "description": "Same-day appointments for dental emergencies"
+      }
+    }
+  },
+  "appointment": {
+    "title": "Book an Appointment",
+    "form": {
+      "name": "Full Name",
+      "phone": "Phone Number",
+      "email": "Email Address",
+      "date": "Preferred Date",
+      "time": "Preferred Time",
+      "notes": "Additional Notes",
+      "submit": "Schedule Appointment",
+      "success": "Appointment scheduled successfully!",
+      "error": "There was an error scheduling your appointment. Please try again."
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "form": {
+      "name": "Your Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "message": "Your Message",
+      "submit": "Send Message",
+      "success": "Your message has been sent successfully!",
+      "error": "There was an error sending your message. Please try again."
+    }
+  }
+} 

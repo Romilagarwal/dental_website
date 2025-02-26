@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - NEXT_PUBLIC_API_URL=https://api.yourdomain.com
+      - NEXT_PUBLIC_MIXPANEL_TOKEN=${MIXPANEL_TOKEN}
+      - NEXT_PUBLIC_HOTJAR_ID=${HOTJAR_ID}
+      - NEXT_PUBLIC_HOTJAR_VERSION=${HOTJAR_VERSION} 

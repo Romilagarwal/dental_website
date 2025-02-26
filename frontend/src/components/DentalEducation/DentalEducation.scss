@@ -1,0 +1,99 @@
+.dental-education {
+  @apply py-16 bg-gray-50;
+  
+  .container {
+    @apply max-w-6xl mx-auto px-4;
+  }
+  
+  .section-header {
+    @apply text-center mb-12;
+    
+    h2 {
+      @apply text-3xl md:text-4xl font-bold text-gray-900 mb-3;
+    }
+    
+    p {
+      @apply text-gray-600 max-w-2xl mx-auto;
+    }
+  }
+  
+  .articles-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6;
+  }
+  
+  .education-card {
+    @apply bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300;
+    
+    &:hover {
+      @apply shadow-lg transform -translate-y-1;
+      
+      .card-image img {
+        @apply transform scale-105;
+      }
+    }
+    
+    .card-image {
+      @apply relative h-48 overflow-hidden;
+      
+      img {
+        @apply w-full h-full object-cover transition-transform duration-500;
+      }
+      
+      .video-icon {
+        @apply absolute inset-0 flex items-center justify-center bg-black bg-opacity-30;
+        
+        svg {
+          @apply text-white text-4xl p-4 bg-blue-600 rounded-full;
+        }
+      }
+    }
+    
+    .card-content {
+      @apply p-5;
+      
+      .card-type {
+        @apply flex items-center text-sm text-gray-500 mb-2;
+        
+        svg {
+          @apply mr-1;
+        }
+      }
+      
+      h3 {
+        @apply text-lg font-bold text-gray-900 mb-2 leading-tight;
+      }
+      
+      p {
+        @apply text-gray-600 text-sm mb-4;
+      }
+      
+      .read-more {
+        @apply flex items-center text-blue-600 text-sm font-medium;
+        
+        svg {
+          @apply ml-1 transition-transform duration-300;
+        }
+        
+        &:hover svg {
+          @apply transform translate-x-1;
+        }
+      }
+    }
+  }
+  
+  .view-all {
+    @apply mt-12 text-center;
+    
+    .view-all-button {
+      @apply inline-flex items-center px-6 py-3 bg-white border border-gray-300 rounded-full text-blue-600 font-medium transition-colors duration-300;
+      
+      &:hover {
+        @apply bg-blue-50 border-blue-200;
+      }
+      
+      svg {
+        @apply ml-2;
+      }
+    }
+  }
+} 

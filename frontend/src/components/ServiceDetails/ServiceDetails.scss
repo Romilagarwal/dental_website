@@ -1,0 +1,111 @@
+.service-details {
+  @apply py-16;
+  
+  .container {
+    @apply max-w-6xl mx-auto px-4;
+  }
+  
+  .section-header {
+    @apply text-center mb-12;
+    
+    h2 {
+      @apply text-3xl md:text-4xl font-bold text-gray-900 mb-3;
+    }
+    
+    p {
+      @apply text-gray-600 max-w-2xl mx-auto;
+    }
+  }
+  
+  .services-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-8;
+  }
+  
+  .service-card {
+    @apply bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300 relative;
+    
+    &:hover {
+      @apply shadow-xl;
+      
+      .service-image img {
+        @apply transform scale-105;
+      }
+    }
+    
+    &.popular {
+      @apply border-2 border-blue-500;
+    }
+    
+    .popular-tag {
+      @apply absolute top-4 right-4 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full z-10;
+    }
+    
+    .service-image {
+      @apply h-60 overflow-hidden;
+      
+      img {
+        @apply w-full h-full object-cover transition-transform duration-500;
+      }
+    }
+    
+    .service-content {
+      @apply p-6;
+      
+      h3 {
+        @apply text-xl font-bold text-gray-900 mb-3;
+      }
+      
+      .description {
+        @apply text-gray-600 mb-6;
+      }
+      
+      .service-details-list {
+        @apply mb-6;
+        
+        h4 {
+          @apply text-sm font-bold text-gray-800 mb-2;
+        }
+        
+        ul {
+          @apply space-y-2;
+          
+          li {
+            @apply flex items-start text-sm text-gray-700;
+            
+            svg {
+              @apply text-green-500 mr-2 mt-1 flex-shrink-0;
+            }
+          }
+        }
+      }
+      
+      .service-info-grid {
+        @apply grid grid-cols-3 gap-4 mb-6;
+        
+        .info-item {
+          @apply flex items-start;
+          
+          svg {
+            @apply text-blue-500 mr-2 mt-1 flex-shrink-0;
+          }
+          
+          h5 {
+            @apply text-xs font-bold text-gray-800;
+          }
+          
+          p {
+            @apply text-xs text-gray-600;
+          }
+        }
+      }
+      
+      .book-service-button {
+        @apply w-full py-3 px-4 bg-blue-600 text-white rounded-md font-medium text-center transition-colors duration-300;
+        
+        &:hover {
+          @apply bg-blue-700;
+        }
+      }
+    }
+  }
+} 

@@ -1,0 +1,47 @@
+.language-switcher {
+  @apply relative;
+  
+  .language-button {
+    @apply flex items-center gap-2 px-3 py-1.5 rounded-md bg-white border border-gray-300 text-sm font-medium text-gray-700;
+    
+    .globe-icon {
+      @apply text-gray-500;
+    }
+    
+    .current-language {
+      @apply flex items-center gap-1;
+      
+      .flag {
+        font-size: 1.2em;
+      }
+    }
+    
+    .arrow-icon {
+      @apply text-gray-500 ml-1 transition-transform duration-200;
+      
+      &.open {
+        @apply transform rotate-180;
+      }
+    }
+  }
+  
+  .language-dropdown {
+    @apply absolute right-0 mt-1 w-full min-w-max bg-white border border-gray-200 rounded-md shadow-lg z-50;
+    
+    .language-option {
+      @apply flex items-center gap-2 w-full px-3 py-2 text-left text-sm text-gray-700;
+      
+      &.active {
+        @apply bg-blue-50 text-blue-700;
+      }
+      
+      .flag {
+        font-size: 1.2em;
+      }
+      
+      .name {
+        white-space: nowrap;
+      }
+    }
+  }
+} 

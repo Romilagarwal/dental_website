@@ -1,0 +1,68 @@
+.dental-records {
+  .records-list {
+    @apply space-y-4;
+
+    .record-card {
+      @apply bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md
+             border border-gray-200 dark:border-gray-700;
+
+      .record-header {
+        @apply flex justify-between items-center mb-4;
+
+        .record-type {
+          @apply flex items-center gap-2;
+
+          .icon {
+            @apply text-blue-500;
+          }
+
+          h4 {
+            @apply text-lg font-semibold;
+          }
+        }
+
+        .record-date {
+          @apply text-sm text-gray-600 dark:text-gray-400;
+        }
+      }
+
+      .record-details {
+        @apply space-y-2 mb-4;
+
+        .dentist {
+          @apply text-gray-700 dark:text-gray-300;
+        }
+
+        .notes {
+          @apply text-gray-600 dark:text-gray-400;
+        }
+      }
+
+      .attachments {
+        @apply border-t dark:border-gray-700 pt-4;
+
+        h5 {
+          @apply text-sm font-semibold mb-2;
+        }
+
+        .attachment-list {
+          @apply space-y-2;
+
+          .attachment {
+            @apply flex items-center justify-between p-2
+                   bg-gray-50 dark:bg-gray-700 rounded;
+
+            .actions {
+              @apply flex gap-2;
+
+              button {
+                @apply p-2 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-full
+                       text-gray-600 dark:text-gray-400 transition-colors;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+} 

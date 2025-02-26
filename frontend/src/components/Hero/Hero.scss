@@ -1,0 +1,83 @@
+.hero-section {
+  @apply relative min-h-[600px] flex items-center overflow-hidden;
+  background: linear-gradient(135deg, #f0f9ff 0%, #e1f5fe 100%);
+  
+  .overlay {
+    @apply absolute inset-0 bg-blue-900 opacity-5;
+  }
+  
+  .container {
+    @apply relative z-10 mx-auto px-4 max-w-6xl w-full;
+  }
+  
+  .hero-content {
+    @apply flex flex-col md:flex-row items-center justify-between;
+  }
+  
+  .hero-text {
+    @apply md:w-1/2 mb-10 md:mb-0;
+    
+    .hero-logo {
+      @apply mb-6;
+      
+      img {
+        @apply max-w-full h-auto;
+      }
+    }
+    
+    h1 {
+      @apply text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 leading-tight;
+      
+      @screen lg {
+        max-width: 500px;
+      }
+    }
+    
+    p {
+      @apply text-lg text-gray-700 mb-8;
+      max-width: 450px;
+    }
+    
+    .hero-buttons {
+      @apply flex flex-wrap gap-4 mb-6;
+      
+      .primary-button {
+        @apply flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-full font-medium;
+      }
+      
+      .secondary-button {
+        @apply flex items-center gap-2 px-6 py-3 bg-white border border-gray-300 text-gray-700 rounded-full;
+      }
+    }
+    
+    .clinic-status {
+      @apply inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full shadow-sm text-sm;
+      
+      .status-indicator {
+        @apply w-2.5 h-2.5 rounded-full;
+        
+        &.open {
+          @apply bg-green-500;
+        }
+        
+        &.closed {
+          @apply bg-red-500;
+        }
+      }
+      
+      .hours {
+        @apply ml-2 text-gray-500;
+      }
+    }
+  }
+  
+  .hero-image {
+    @apply md:w-1/2 flex justify-center;
+    
+    img {
+      @apply rounded-lg shadow-xl max-w-full h-auto;
+      max-height: 500px;
+      object-fit: cover;
+    }
+  }
+} 

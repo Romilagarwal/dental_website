@@ -1,0 +1,39 @@
+.clinic-status-widget {
+  @apply flex items-center gap-2 px-3 py-1 rounded-full text-sm font-medium;
+  
+  &.open {
+    @apply bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200;
+    
+    .icon {
+      @apply text-green-600 dark:text-green-400;
+    }
+  }
+  
+  &.closed {
+    @apply bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200;
+    
+    .icon {
+      @apply text-red-600 dark:text-red-400;
+    }
+  }
+  
+  &.loading {
+    @apply bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-200;
+  }
+  
+  &.error {
+    @apply bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200;
+  }
+  
+  .icon {
+    @apply w-4 h-4;
+  }
+  
+  .status-content {
+    @apply flex flex-col leading-tight;
+    
+    .next-opening {
+      @apply text-xs opacity-80;
+    }
+  }
+} 

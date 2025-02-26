@@ -1,0 +1,76 @@
+.profile-settings {
+  .settings-sections {
+    @apply space-y-8;
+
+    section {
+      @apply bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md
+             border border-gray-200 dark:border-gray-700;
+
+      h4 {
+        @apply text-lg font-semibold mb-4 pb-2 border-b dark:border-gray-700;
+      }
+
+      .form-group {
+        @apply mb-4;
+
+        label {
+          @apply block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1;
+        }
+
+        input {
+          @apply w-full px-4 py-2 rounded-lg border dark:border-gray-600
+                 focus:ring-2 focus:ring-blue-500 focus:border-transparent
+                 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100;
+
+          &:disabled {
+            @apply bg-gray-100 dark:bg-gray-800 cursor-not-allowed;
+          }
+        }
+      }
+
+      .form-actions {
+        @apply flex gap-2 mt-6;
+
+        button {
+          @apply px-4 py-2 rounded-lg text-sm font-medium transition-colors;
+        }
+
+        .edit-btn {
+          @apply bg-blue-500 text-white hover:bg-blue-600;
+        }
+
+        .save-btn {
+          @apply bg-green-500 text-white hover:bg-green-600;
+        }
+
+        .cancel-btn {
+          @apply bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300
+                 hover:bg-gray-200 dark:hover:bg-gray-600;
+        }
+      }
+
+      .medical-history {
+        .history-item {
+          @apply mb-4;
+
+          h5 {
+            @apply text-sm font-medium text-gray-700 dark:text-gray-300 mb-2;
+          }
+
+          ul {
+            @apply space-y-1;
+
+            li {
+              @apply text-sm text-gray-600 dark:text-gray-400;
+            }
+          }
+        }
+      }
+
+      .change-password-btn {
+        @apply w-full mt-4 px-4 py-2 bg-blue-500 text-white rounded-lg
+               font-medium hover:bg-blue-600 transition-colors;
+      }
+    }
+  }
+} 

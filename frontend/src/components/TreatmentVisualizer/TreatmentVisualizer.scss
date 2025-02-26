@@ -1,0 +1,71 @@
+.treatment-visualizer {
+  @apply max-w-6xl mx-auto p-6 bg-white rounded-xl shadow-lg;
+  
+  .model-selector {
+    @apply mb-6;
+    
+    h3 {
+      @apply text-xl font-bold text-gray-800 mb-4;
+    }
+    
+    .model-options {
+      @apply flex flex-wrap gap-3;
+      
+      .model-option {
+        @apply px-4 py-2 rounded-md text-sm font-medium border border-gray-300 bg-white;
+        
+        &:hover {
+          @apply bg-gray-50;
+        }
+        
+        &.selected {
+          @apply bg-blue-600 text-white border-blue-600;
+        }
+      }
+    }
+  }
+  
+  .model-viewer {
+    @apply relative rounded-lg overflow-hidden mb-6;
+    height: 400px;
+    
+    canvas {
+      @apply w-full h-full touch-none;
+    }
+    
+    .info-button {
+      @apply absolute top-4 right-4 bg-white rounded-full p-2 shadow-md text-blue-600;
+      z-index: 10;
+    }
+    
+    .model-info {
+      @apply absolute bottom-4 left-4 right-4 bg-white p-4 rounded-md shadow-lg;
+      max-width: 400px;
+      z-index: 10;
+      
+      h4 {
+        @apply text-lg font-bold text-gray-800 mb-2;
+      }
+      
+      p {
+        @apply text-gray-600 text-sm;
+      }
+      
+      .close-info {
+        @apply mt-3 px-3 py-1 text-xs bg-gray-200 rounded-md text-gray-700;
+      }
+    }
+  }
+  
+  .model-controls-help {
+    @apply text-center text-gray-500 text-sm;
+    
+    p {
+      @apply mb-1;
+    }
+    
+    .note {
+      @apply italic text-xs;
+    }
+  }
+} 
