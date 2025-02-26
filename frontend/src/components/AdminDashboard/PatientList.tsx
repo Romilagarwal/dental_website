@@ -53,7 +53,7 @@ const PatientList: React.FC = () => {
             type="text"
             placeholder="Search patients..."
             value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSearchTerm(e.target.value)}
           />
         </div>
       </div>
@@ -97,6 +97,7 @@ const PatientList: React.FC = () => {
             <button
               className="view-history-btn"
               onClick={() => setSelectedPatient(patient.id === selectedPatient ? null : patient.id)}
+              type="button"
             >
               <FiFileText /> View Medical History
             </button>
@@ -116,8 +117,8 @@ const PatientList: React.FC = () => {
                     ))}
                   </ul>
                   <div className="action-buttons">
-                    <button className="edit-btn">Edit Details</button>
-                    <button className="schedule-btn">Schedule Appointment</button>
+                    <button className="edit-btn" type="button">Edit Details</button>
+                    <button className="schedule-btn" type="button">Schedule Appointment</button>
                   </div>
                 </motion.div>
               )}
@@ -129,4 +130,4 @@ const PatientList: React.FC = () => {
   );
 };
 
-export default PatientList; 
+export default PatientList;
